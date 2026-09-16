@@ -20,6 +20,12 @@ services:
       - HASHEOUS_API_ENABLED=true
       - SCAN_WORKERS=4
       - WEB_SERVER_CONCURRENCY=4
+      - OIDC_ENABLED= # set via Coolify env vars, not in git
+      - OIDC_PROVIDER= # set via Coolify env vars, not in git
+      - OIDC_CLIENT_ID= # set via Coolify env vars, not in git
+      - OIDC_CLIENT_SECRET= # set via Coolify env vars, not in git
+      - OIDC_REDIRECT_URI= # set via Coolify env vars, not in git
+      - OIDC_SERVER_METADATA_URL= # set via Coolify env vars, not in git
     volumes:
       - romm_resources:/romm/resources
       - romm_redis_data:/redis-data
